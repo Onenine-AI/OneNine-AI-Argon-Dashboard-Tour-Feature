@@ -1,0 +1,29 @@
+
+  <script src="/static/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="/static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="/static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      var dropdown = "dropdown-menu";
+      var options= {
+        "Profile" : "https:",
+        "Support" : "http://appseed.us/support",
+        "Tour" : "../tour/tour_index.html"
+
+    }
+
+    var selected_input = document.querySelectorAll('form select[name ="' + dropdown + '"]')
+
+    window.instapageFormSubmitSucess=function(){
+      for (var i = 0; i< selected_input; i++){
+        var selected_option = selected_input[i].value;
+        docuemnt.querySelectorAll( 'input[name="redirect"]')[i].value = options[selected_option];
+      }
+    }
+
+
+    });
+  </script>
+
