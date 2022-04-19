@@ -1,10 +1,12 @@
 $(document).ready(function (){
-    var tour = new Tour({
+    var tour = new Tour({  
         steps: [
             {
                 element:"#Total-traffic",
-                content:"<h5>View your total traffic and percentage</h5>",
+                title: "Total Traffic",
+                content:"View your total traffic and percentage",
                 placement: "top",
+                backdrop: true
             }
         ]
     });

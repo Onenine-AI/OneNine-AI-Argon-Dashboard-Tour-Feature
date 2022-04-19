@@ -3,7 +3,9 @@
 {% block title %} Dashboard {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+<!--<link href="../../static/assets/css/bootstrap/bootstrap-tour.min.css" rel="stylesheet">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/5.1.0/introjs.min.css" integrity="sha512-iaYE9B9u4GU8+KkRTOdRdZuzKdYw1X0hOAa4GwDV/uwdXgoX/ffT3ph1+HG1m4LPZD/HV+dkuHvWFLZtPviylQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />{% endblock stylesheets %}
 
 {% block content %}
 
@@ -28,7 +30,7 @@
             </div>
           </div>
           <!-- Card stats -->
-          <div class="row">
+          <div data-title= "Stats" data-intro="Here you can see your total traffic, new users, sales and performance " class="row" >
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
@@ -407,10 +409,16 @@
 
 <!-- Specific JS goes HERE --> 
 {% block javascripts %}
+<!-- 
   <script src="../../static/assets/js/components/tour/bootstrap-tour.js"></script>
   <script src="../../static/assets/js/components/tour/bootstrap-tour.min.js"></script>
+  <script src="../../static/assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="../../static/assets/js/components/tour/tour.js"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/5.1.0/intro.min.js" integrity="sha512-B0B1bdTGi9XHtoCINbtR6z9Vi8IYvvtImIE8KWMtqWAVUt2Wn2k69GxM7ya/3rQcz/Pgm/o1WcDU347/5k202A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    introJs().start();
+  </script>
   <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
   <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-
 {% endblock javascripts %}
